@@ -1,0 +1,8 @@
+{ 
+  "env" : {
+    "ANTHROPIC_BASE_URL": "https://token-plan-sgp.xiaomimimo.com/anthropic",
+    "ANTHROPIC_AUTH_TOKEN": "tp-svjgq930xhio9wudhmndqhih6druc6j892pbnswkpiabuuuo",
+    "ANTHROPIC_API_KEY": "",
+    "ANTHROPIC_MODEL": "xiaomi/mimo-v2.5-pro"
+  }
+}

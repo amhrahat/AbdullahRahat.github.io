@@ -1,0 +1,164 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[left=0.6in,top=0.5in,right=0.6in,bottom=0.5in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+
+\setlist[itemize]{leftmargin=*, itemsep=1pt, topsep=2pt, parsep=0pt}
+
+\begin{document}
+
+% ---------------------------------------------------------------
+% HEADER
+% ---------------------------------------------------------------
+\begin{center}
+    {\LARGE \textbf{Abdullah Rahat}}\\[4pt]
+    Dhaka, Bangladesh $\cdot$ +880 1312583936 $\cdot$ \href{mailto:rahatabdullah879@gmail.com}{rahatabdullah879@gmail.com}\\
+    \href{https://www.linkedin.com/in/abdullah-rahat-bracu/}{linkedin.com/in/abdullah-rahat-bracu} $\cdot$ \href{https://github.com/amhrahat}{github.com/amhrahat}
+\end{center}
+
+% ---------------------------------------------------------------
+% SUMMARY
+% ---------------------------------------------------------------
+\section*{Summary}
+Software Engineer with experience building Agentic AI systems using FastAPI, LangChain, and LangGraph, including RAG pipelines, asynchronous workflows, and observability tooling. Background in backend development for ERP systems and cross-platform Flutter applications. Published researcher in deep learning model compression.
+
+% ---------------------------------------------------------------
+% SKILLS
+% ---------------------------------------------------------------
+\section*{Technical Skills}
+\textbf{Languages:} Python, SQL, Java, Dart \\
+\textbf{Frameworks:} FastAPI, Spring Boot, Flutter (Riverpod, GoRouter, Hive, Dio) \\
+\textbf{Databases:} PostgreSQL, Pgvector, Redis \\
+\textbf{AI/ML:} LangChain, LangGraph, RAG, Langfuse, OCR, XGBoost \\
+\textbf{Tools:} Docker, Git, Celery, Postman, Prometheus, Loki, Grafana, Linux
+
+% ---------------------------------------------------------------
+% EXPERIENCE
+% ---------------------------------------------------------------
+\section*{Experience}
+
+\textbf{Software Engineer I} \hfill Oct 2025 -- Present\\
+Wyze Tech Ltd \hfill Dhaka, Bangladesh
+\begin{itemize}
+    \item Built a Flutter application consuming FastAPI backend services, following clean architecture and modular design with Riverpod, GoRouter, Hive, and Dio.
+    \item Developed Agentic AI systems using FastAPI, LangChain, and LangGraph with multi-step tool execution, integrating Langfuse for observability.
+    \item Implemented asynchronous workflows using Redis and Celery, and configured Prometheus, Loki, and Grafana for logging and tracing.
+    \item Implemented RAG pipelines using Pgvector and external knowledge sources to generate contextual responses.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{Software Engineer} \hfill Feb 2025 -- Sep 2025\\
+Giga Tech Ltd \hfill Dhaka, Bangladesh
+\begin{itemize}
+    \item Developed and maintained backend services for ERP systems using FastAPI and PostgreSQL.
+    \item Designed REST APIs for inventory, order, and user workflows with optimized data handling.
+    \item Built and deployed a containerized OCR service for ERP document processing.
+    \item Implemented report enhancements, production bug fixes, and transaction code maintenance for an ERP system supporting one million users.
+    \item Supported functional consultants by analyzing business requirements and database tables to assist in issue investigation and validation.
+\end{itemize}
+
+% ---------------------------------------------------------------
+% PROJECTS
+% ---------------------------------------------------------------
+\section*{Projects}
+
+\textbf{Blog Platform API} (Spring Boot) \hfill \href{https://github.com/amhrahat/springboot_blog_app}{GitHub}
+\begin{itemize}
+    \item Engineered a production-ready blog platform API with JWT authentication, role-based authorization, and OTP-based email verification.
+    \item Architected a scalable backend with dependency injection, validation, and service-layer separation using PostgreSQL and Hibernate.
+    \item Integrated Gemini API for AI-powered content generation and containerized services with Docker; documented via OpenAPI/Swagger.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{Email Generation Assistant} (FastAPI, LangGraph) \hfill \href{https://github.com/amhrahat/evaluatio-ai-email-generation}{GitHub}
+\begin{itemize}
+    \item Built an email generation system using LangGraph and OpenRouter with dual LLM models for response comparison.
+    \item Implemented structured outputs with Pydantic, a modular service-layer architecture, and SQLAlchemy-based persistence.
+    \item Developed an evaluation pipeline measuring fact coverage, tone alignment, and structure quality, producing automated CSV/JSON reports.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{MediAI} (FastAPI, LangGraph) \hfill \href{https://github.com/amhrahat/shukhee_demo}{GitHub}
+\begin{itemize}
+    \item Built an AI-powered healthcare assistant integrating clinical risk prediction, patient triage, and structured medical note generation.
+    \item Developed an XGBoost-based risk stratification model and LLM-driven specialty routing with structured JSON outputs.
+    \item Designed a modular architecture with environment-based configuration and an interactive API documentation interface.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{ERPNext Agentic AI System} \hfill \href{https://github.com/amhrahat/erp_agent}{GitHub}
+\begin{itemize}
+    \item Built an LLM-powered agent integrating ERPNext via Frappe APIs for natural language-driven operations.
+    \item Implemented tool-based execution with schema enforcement, failure handling, and persistent memory with summarization.
+    \item Supported hybrid LLMs (Ollama, Gemini) and integrated Langfuse for observability.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{ReAct Graph AI Agent} \hfill \href{https://github.com/amhrahat/ReAct-Graph-AI-Agent}{GitHub}
+\begin{itemize}
+    \item Engineered a graph-based LLM agent using LangGraph with conditional routing and stateful execution.
+    \item Implemented ReAct reasoning with dynamic tool invocation across search, ArXiv, and Wikipedia sources.
+    \item Integrated multi-model backends (Gemini, Ollama) with a FastAPI layer for scalable, asynchronous interaction.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{Emergency Connect} (Flutter) \hfill \href{https://github.com/amhrahat/emergency-connect}{GitHub}
+\begin{itemize}
+    \item Developed a cross-platform emergency assistance application with local JSON-based data management.
+    \item Implemented platform-specific support for Android, iOS, Linux, macOS, and Windows using reusable widgets.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{To-Do API} (Spring Boot) \hfill \href{https://github.com/amhrahat/SpringBoot-To-Do-App}{GitHub}
+\begin{itemize}
+    \item Developed a task management REST API with layered architecture, DTO mapping, and Docker-based deployment.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{Task Manager CLI} (Java) \hfill \href{https://github.com/amhrahat/Task-Manager}{GitHub}
+\begin{itemize}
+    \item Developed a CLI-based task manager applying OOP principles and clean modular design for task operations.
+\end{itemize}
+
+% ---------------------------------------------------------------
+% EDUCATION
+% ---------------------------------------------------------------
+
+\section*{Education}
+\textbf{Bachelor of Science in Computer Science} \hfill 2020 -- 2024\\
+BRAC University, CGPA: 3.45\\
+Thesis: \textit{Knowledge Distillation and Weight Pruning for Two-step Compression of ConvNets in Rice Leaf Disease Classification}. Published in NSysS Conference, November 2024. \href{https://dl.acm.org/doi/10.1145/3704522.3704525}{DOI Link}\\
+\textbf{Relevant Coursework:} Pattern Recognition, Neural Networks, Machine Learning, Image Processing, Data Science
+% ---------------------------------------------------------------
+% CERTIFICATIONS
+% ---------------------------------------------------------------
+\section*{Certifications}
+\textbf{Python (Basic)} -- HackerRank, Dec 2024 \hfill \href{https://www.hackerrank.com/certificates/iframe/24b1f60bb693}{Certificate}\\
+\textbf{Java (Basic)} -- HackerRank, Dec 2024 \hfill \href{https://www.hackerrank.com/certificates/iframe/a0d20cadec4f}{Certificate}\\
+\textbf{SQL (Basic)} -- HackerRank, Dec 2024 \hfill \href{https://www.hackerrank.com/certificates/iframe/4728ab6b6d96}{Certificate}
+
+% ---------------------------------------------------------------
+% ACTIVITIES
+% ---------------------------------------------------------------
+\section*{Extra-Curricular Activities}
+\begin{itemize}
+    \item Achieved recognition in the National Math Olympiad, National Science Olympiad, and other competitive events. \href{https://drive.google.com/file/d/16LspK1plSKVER3VEShbUcWfIE3-jeLkt/view?usp=sharing}{Certificate}
+    \item Ranked in the BUCC Intra Department Coding Contest.
+    \item Served as an Executive Member of the BRAC University Computer Club.
+\end{itemize}
+
+\end{document}
