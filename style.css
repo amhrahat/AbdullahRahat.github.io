@@ -15,7 +15,7 @@
     --text-muted: #a8afb9;
     --text-dim: #6e7681;
     --accent: #5ea1ff;
-    --accent-dim: #3d6fb3;
+    --accent-hover: #7bb1ff;
 
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
@@ -34,6 +34,19 @@
     --radius: 6px;
 }
 
+[data-theme="light"] {
+    --bg: #ffffff;
+    --surface: #f6f8fa;
+    --surface-raised: #eef1f5;
+    --border: #d8dde4;
+    --border-strong: #bfc5ce;
+    --text: #1a1d23;
+    --text-muted: #525a65;
+    --text-dim: #8b929c;
+    --accent: #2563eb;
+    --accent-hover: #3b82f6;
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: var(--nav-height);
@@ -45,6 +58,7 @@ body {
     background: var(--bg);
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
+    transition: background 0.3s, color 0.3s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -82,7 +96,11 @@ button:focus-visible {
     -webkit-backdrop-filter: blur(12px);
     z-index: 1000;
     border-bottom: 1px solid transparent;
-    transition: border-color 0.2s;
+    transition: border-color 0.2s, background 0.3s;
+}
+
+[data-theme="light"] .nav {
+    background: rgba(255, 255, 255, 0.85);
 }
 
 .nav.scrolled {
@@ -96,15 +114,8 @@ button:focus-visible {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-
-.nav-mark {
-    font-family: var(--font-mono);
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--text);
-    letter-spacing: 0.02em;
+    justify-content: center;
+    position: relative;
 }
 
 .nav-links {
@@ -133,6 +144,8 @@ button:focus-visible {
     border: none;
     cursor: pointer;
     padding: var(--sp-1);
+    position: absolute;
+    left: 0;
 }
 
 .nav-toggle span {
@@ -147,6 +160,32 @@ button:focus-visible {
 .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
 .nav-toggle.active span:nth-child(2) { opacity: 0; }
 .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+
+/* Theme toggle */
+.theme-toggle {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.theme-toggle:hover {
+    color: var(--text);
+    border-color: var(--border-strong);
+}
+
+.icon-moon { display: none; }
+[data-theme="light"] .icon-sun { display: none; }
+[data-theme="light"] .icon-moon { display: block; }
 
 /* Hero */
 .hero {
@@ -208,11 +247,11 @@ button:focus-visible {
 
 .btn-primary {
     background: var(--accent);
-    color: var(--bg);
+    color: #fff;
 }
 
 .btn-primary:hover {
-    background: #7bb1ff;
+    background: var(--accent-hover);
 }
 
 .btn-outline {
@@ -488,7 +527,7 @@ button:focus-visible {
 }
 
 .project-link:hover {
-    color: #7bb1ff;
+    color: var(--accent-hover);
 }
 
 /* Education */
@@ -633,6 +672,8 @@ button:focus-visible {
 @media (max-width: 768px) {
     .nav-toggle { display: flex; }
 
+    .nav-container { justify-content: center; }
+
     .nav-links {
         position: fixed;
         top: var(--nav-height);
@@ -653,6 +694,8 @@ button:focus-visible {
         opacity: 1;
         visibility: visible;
     }
+
+    .theme-toggle { right: var(--sp-4); }
 
     .hero { min-height: auto; padding: calc(var(--nav-height) + var(--sp-6)) 0 var(--sp-6); }
 
