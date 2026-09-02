@@ -18,11 +18,7 @@ navLinks.querySelectorAll('a').forEach(link => {
 // Nav scroll effect
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-        nav.classList.add('scrolled');
-    } else {
-        nav.classList.remove('scrolled');
-    }
+    nav.classList.toggle('scrolled', window.scrollY > 10);
 });
 
 // Active nav link highlighting
@@ -54,11 +50,7 @@ window.addEventListener('scroll', updateActiveNav);
 const scrollTopBtn = document.getElementById('scrollTop');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 500) {
-        scrollTopBtn.classList.add('visible');
-    } else {
-        scrollTopBtn.classList.remove('visible');
-    }
+    scrollTopBtn.classList.toggle('visible', window.scrollY > 500);
 });
 
 scrollTopBtn.addEventListener('click', () => {
@@ -66,7 +58,9 @@ scrollTopBtn.addEventListener('click', () => {
 });
 
 // Fade-in animation on scroll
-const fadeElements = document.querySelectorAll('.section-title, .about-content, .skill-category, .timeline-item, .project-card, .education-item, .cert-item, .contact-item');
+const fadeElements = document.querySelectorAll(
+    '.section-label, .section-title, .about-text, .about-stats, .skill-category, .experience-card, .project-card, .education-card, .cert-card, .contact-card'
+);
 
 fadeElements.forEach(el => el.classList.add('fade-in'));
 
@@ -76,6 +70,6 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.add('visible');
         }
     });
-}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
 fadeElements.forEach(el => observer.observe(el));

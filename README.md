@@ -4,10 +4,10 @@ A clean, minimalist portfolio website hosted on GitHub Pages.
 
 ## Setup
 
-1. Create a new repository on GitHub named `<your-username>.github.io`
+1. Create a new repository on GitHub named `AbdullahRahat.github.io`
 2. Push this directory to that repository
 3. Go to **Settings → Pages** and set the source to the `main` branch
-4. Your site will be live at `https://<your-username>.github.io`
+4. Your site will be live at `https://AbdullahRahat.github.io`
 
 ## Adding Your CV
 
